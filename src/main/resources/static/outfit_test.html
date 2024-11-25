@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 코디 테스트</title>
+    <script>
+        async function saveOutfit() {
+        const userId = document.getElementById("userId").value;
+        const title = document.getElementById("title").value;
+        const description = document.getElementById("description").value;
+
+        // 아이템 입력(JSON 형식)
+        let items;
+        try {
+            items = JSON.parse(document.getElementById("items").value);
+        } catch (error) {
+            alert("아이템 목록이 올바른 JSON 형식이 아닙니다.");
+            return;
+        }
+
+        const outfit = {
+            title: title,
+            description: description,
+            items: items
+        };
+
+        try {
+            const response = await fetch(`/api/outfits/save?userId=${userId}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(outfit)
+            });
+
+            const result = await response.json();
+            alert("코디 저장 성공! 결과: " + JSON.stringify(result));
+        } catch (error) {
+            console.error("코디 저장 실패:", error);
+            alert("코디 저장 실패");
+        }
+    }
+
+    </script>
+</head>
+<body>
+<h1>나만의 코디 테스트</h1>
+
+<div>
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" placeholder="사용자 ID 입력">
+</div>
+<div>
+    <label for="items">Items:</label>
+    <textarea id="items" placeholder="아이템 목록 JSON 형식으로 입력"></textarea>
+</div>
+
+<div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" placeholder="코디 제목 입력">
+</div>
+<div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" placeholder="코디 설명 입력">
+</div>
+
+<button onclick="saveOutfit()">코디 저장</button>
+<button onclick="getOutfitsByUser()">사용자 코디 불러오기</button>
+</body>
+</html>
