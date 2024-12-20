@@ -1,0 +1,151 @@
+11.피부건강->자외선 및 습도 정보 페이지
+
+<HTML>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자연선 및 습도 정보</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="home-btn">홈</button>
+      <h1>자연선 및 습도 정보</h1>
+      <button class="menu-btn">메뉴</button>
+    </header>
+    <div class="page-path">페이지 경로: 메인 > 자연선 및 습도</div>
+    <main>
+      <div class="info-box">
+        <h2>현재 자연선 및 습도 상태</h2>
+        <p class="alert">자연선 강도: <span class="highlight">매우 강함</span></p>
+        <p>습도: 65% (보통 습도)</p>
+        <button class="action-btn">자연선 대응 요령</button>
+      </div>
+      <button class="back-btn">뒤로가기</button>
+    </main>
+  </div>
+</body>
+</html>
+
+
+<CSS>
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.home-btn, .menu-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-btn:hover, .menu-btn:hover {
+  background-color: #0056b3;
+}
+
+.page-path {
+  background-color: #ffd700;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+.info-box {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.info-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.alert {
+  font-size: 16px;
+  color: #d9534f;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.action-btn {
+  display: block;
+  margin: 20px 0 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+}
+
+.back-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}

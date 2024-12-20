@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.home-btn, .menu-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-btn:hover, .menu-btn:hover {
+  background-color: #0056b3;
+}
+
+.page-path {
+  background-color: #ffd700;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.share-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  background-color: #218838;
+}
+
+main {
+  padding: 20px;
+}
+
+.post {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.post h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.post p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.reaction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-btn, .comment-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.comment-btn {
+  background-color: #007bff;
+}
+
+.like-btn:hover {
+  background-color: #cc0000;
+}
+
+.comment-btn:hover {
+  background-color: #0056b3;
+}
+
+.write-comment-btn {
+  margin-top: 10px;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.write-comment-btn:hover {
+  background-color: #5a6268;
+}
+
+.write-comment-btn i {
+  font-size: 16px;
+}

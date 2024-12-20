@@ -1,0 +1,212 @@
+4.게시판->게시판 목록 확인 페이지
+
+<HTML>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시판</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="home-btn">홈</button>
+      <h1>게시판</h1>
+      <button class="menu-btn">메뉴</button>
+    </header>
+    <div class="page-path">
+      페이지 경로: 메인 > 게시판
+    </div>
+    <button class="share-btn">의상 공유</button>
+    <main>
+      <div class="post">
+        <h2>여름철 시원한 코디</h2>
+        <p>여름철 더위에 시원하고 편안한 의상 세트입니다. 활동적인 스타일을 좋아하시는 분께 추천!</p>
+        <div class="reaction">
+          <button class="like-btn">❤️ 10</button>
+          <button class="comment-btn"><i class="fas fa-comments"></i> 5개 댓글</button>
+        </div>
+        <button class="write-comment-btn">
+          <i class="fas fa-pen"></i> 댓글쓰기
+        </button>
+      </div>
+      <div class="post">
+        <h2>가을 코디 추천</h2>
+        <p>가을에 딱 알맞은 따뜻하고 소프트한 의상 세트입니다. 가을 분위기를 즐겨보세요.</p>
+        <div class="reaction">
+          <button class="like-btn">❤️ 8</button>
+          <button class="comment-btn"><i class="fas fa-comments"></i> 3개 댓글</button>
+        </div>
+        <button class="write-comment-btn">
+          <i class="fas fa-pen"></i> 댓글쓰기
+        </button>
+      </div>
+      <div class="post">
+        <h2>겨울철 따뜻한 코디</h2>
+        <p>추운 겨울철에 적합한 따뜻한 의상 세트입니다. 보온성을 고려한 스타일을 좋아하시는 분께 추천합니다.</p>
+        <div class="reaction">
+          <button class="like-btn">❤️ 7</button>
+          <button class="comment-btn"><i class="fas fa-comments"></i> 7개 댓글</button>
+        </div>
+        <button class="write-comment-btn">
+          <i class="fas fa-pen"></i> 댓글쓰기
+        </button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
+
+<CSS>
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.home-btn, .menu-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-btn:hover, .menu-btn:hover {
+  background-color: #0056b3;
+}
+
+.page-path {
+  background-color: #ffd700;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.share-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  background-color: #218838;
+}
+
+main {
+  padding: 20px;
+}
+
+.post {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.post h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.post p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.reaction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-btn, .comment-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.comment-btn {
+  background-color: #007bff;
+}
+
+.like-btn:hover {
+  background-color: #cc0000;
+}
+
+.comment-btn:hover {
+  background-color: #0056b3;
+}
+
+.write-comment-btn {
+  margin-top: 10px;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.write-comment-btn:hover {
+  background-color: #5a6268;
+}
+
+.write-comment-btn i {
+  font-size: 16px;
+}

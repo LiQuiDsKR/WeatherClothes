@@ -1,0 +1,179 @@
+7.나만의 코디 페이지
+
+<HTML>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나만의 코디</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="home-menu">
+        <button class="home-btn">🏠</button>
+      </div>
+      <h1>나만의 코디</h1>
+      <div class="menu">
+        <button class="menu-btn">☰ 메뉴</button>
+      </div>
+    </header>
+    <div class="content">
+      <div class="avatar-section">
+        <div class="avatar-box">
+          <img src="avatar-placeholder.png" alt="Avatar">
+        </div>
+      </div>
+      <div class="form-section">
+        <h2>의상 코디하기</h2>
+        <input type="text" placeholder="의상 세트 제목을 입력하세요">
+        <textarea placeholder="의상 세트와 관련된 설명을 입력하세요"></textarea>
+        <div class="button-group">
+          <button class="download-btn">코디 다운로드</button>
+          <button class="upload-btn">의상 업로드</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+<CSS>
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.home-btn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-btn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.avatar-section {
+  flex: 1;
+  max-width: 40%;
+}
+
+.avatar-box {
+  width: 100%;
+  padding-top: 75%;
+  background-color: #eaeaea;
+  border-radius: 8px;
+  position: relative;
+}
+
+.avatar-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%;
+}
+
+.form-section {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.form-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-section textarea {
+  height: 100px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+.upload-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: #218838;
+}

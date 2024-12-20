@@ -1,0 +1,174 @@
+5.게시판->사용자 댓글 확인 페이지
+
+<HTML>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사용자 댓글</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="home-btn">홈</button>
+      <h1>사용자 댓글</h1>
+      <button class="menu-btn">메뉴</button>
+    </header>
+    <p class="page-path">페이지 경로: 메인 > 게시판 > 사용자 댓글</p>
+    <main>
+      <h2>여름철 시원한 코디의 댓글</h2>
+      <div class="comments">
+        <div class="comment">
+          <p>여름을 시원한 코디 너무 좋네요! 특히 여름철에 활동적인 스타일로 입기 좋을 것 같아요. <span>👍</span></p>
+          <button class="like-btn">❤️ 30</button>
+        </div>
+        <div class="comment">
+          <p>여름에 정말 딱 맞는 스타일이네요. 정말 시원하고 편안해 보입니다!</p>
+          <button class="like-btn">❤️ 40</button>
+        </div>
+        <div class="comment">
+          <p>이런 코디가 필요했어요! 색상도 좋고, 정말 여름에 입기 딱 맞을 것 같아요!</p>
+          <button class="like-btn">❤️ 20</button>
+        </div>
+      </div>
+      <button class="back-btn">뒤로가기</button>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<CSS>
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+header .home-btn, header .menu-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .home-btn:hover, header .menu-btn:hover {
+  background-color: #0056b3;
+}
+
+.page-path {
+  background-color: #ffd700;
+  color: #333;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+main h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.comments .comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.comments .comment p {
+  font-size: 16px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.comments .like-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.comments .like-btn:hover {
+  background-color: #cc0000;
+}
+
+.back-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+<JS>
+
+
+document.querySelectorAll(".like-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    let currentLikes = parseInt(button.textContent.replace("❤️ ", ""));
+    button.textContent = `❤️ ${currentLikes + 1}`;
+  });
+});
+
+document.querySelector(".back-btn").addEventListener("click", () => {
+  alert("뒤로가기 버튼 클릭!");
+});

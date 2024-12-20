@@ -1,0 +1,149 @@
+12.피부건강->자외선 대응 요령 페이지
+
+<HTML>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자연선 대응 요령</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="home-btn">홈</button>
+      <h1>자연선 대응 요령</h1>
+      <button class="menu-btn">메뉴</button>
+    </header>
+    <div class="page-path">페이지 경로: 메인 > 자연선 > 자연선 대응 요령</div>
+    <main>
+      <div class="info-box">
+        <h2>오늘의 피부 건강 관리 팁</h2>
+        <p>오늘은 자연선이 강한 날입니다. 피부를 보호하려면 자연선 대응책을 반드시 확인하세요!</p>
+        <h3>자연선 대응 요령</h3>
+        <ul>
+          <li>자외선 차단제(SPF 30 이상)를 아침에 바르고 2시간마다 덧발라주세요.</li>
+          <li>햇빛이 강한 시간대(10시~16시)에는 야외 활동을 피하세요.</li>
+          <li>모자나 긴팔 옷을 착용하여 피부를 보호하세요.</li>
+          <li>피부에 자극이 없는 음료를 섭취하고, 장시간 햇빛 노출이 되지 않도록 주의하세요.</li>
+        </ul>
+      </div>
+      <button class="back-btn">뒤로가기</button>
+    </main>
+  </div>
+</body>
+</html>
+
+
+<CSS>
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.home-btn, .menu-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-btn:hover, .menu-btn:hover {
+  background-color: #0056b3;
+}
+
+.page-path {
+  background-color: #ffd700;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+.info-box {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.info-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.info-box h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.info-box ul {
+  padding-left: 20px;
+}
+
+.info-box ul li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,133 @@
+6.게시판->댓글 쓰기 페이지
+
+<HTML>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>댓글 쓰기</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="page-path">
+      페이지 경로: 메인 > 게시판 > 댓글 쓰기
+    </div>
+    <h1>여름철 시원한 코디</h1>
+    <p>
+      여름철 더위에 시원하고 편안한 의상 세트입니다. 활동적인 스타일을 원하시는 분께 추천!
+    </p>
+    <img src="summer_outfit.jpg" alt="여름철 시원한 코디 이미지" class="main-image">
+    <div class="comment-section">
+      <label for="comment">댓글을 남겨보세요:</label>
+      <textarea id="comment" placeholder="댓글을 작성하세요..."></textarea>
+      <button id="submit-comment">댓글 제출</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<CSS>
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-path {
+  background-color: #ffd700;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.main-image {
+  display: block;
+  margin: 20px 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment-section label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#comment {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+#submit-comment {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-comment:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+<JavaScript>
+
+document.getElementById("submit-comment").addEventListener("click", () => {
+  const comment = document.getElementById("comment").value;
+  if (comment.trim() === "") {
+    alert("댓글을 작성해주세요!");
+  } else {
+    alert("댓글이 제출되었습니다!");
+    document.getElementById("comment").value = ""; // Clear the comment box
+  }
+});
